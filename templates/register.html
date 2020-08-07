@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="data:image/png;base64," />
-    <link rel="stylesheet" href="./styles/global.css" />
-    <script defer src="./scripts/jquery.min.js"></script>
-    <script defer src="./scripts/parsley.min.js"></script>
-    <script defer src="./scripts/parsley.ru.js"></script>
-    <title>Национальная система оповещения - регистрация</title>
-    <div class="login">
-      <form name="loginForm" method="POST" data-parsley-validate>
-        <p class="field">
-          <input required name="firstName" placeholder="Имя" />
-        </p>
-        <p class="field">
-          <input required name="lastName" placeholder="Фамилия" />
-        </p>
-        <p class="field">
-          <input required name="passport" placeholder="Паспорт" />
-        </p>
-        <p class="field">
-          <input required name="city" placeholder="Город" />
-        </p>
-        <p class="field">
-          <input required name="street" placeholder="Улица" />
-        </p>
-        <p class="field">
-          <input
-            type="email"
-            required
-            name="login"
-            placeholder="Электронная почта"
-          />
-        </p>
-        <p class="field">
-          <input required name="phone" placeholder="Номер телефона" />
-        </p>
-        <p class="field">
-          <input
-            type="password"
-            required
-            name="password"
-            placeholder="Пароль"
-          />
-        </p>
-        <p class="submit">
-          <button type="submit" name="submit" class="button register-button">
-            <p>Зарегистрироваться</p>
-          </button>
-        </p>
-      </form>
-    </div>
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="data:image/png;base64," />
+  <link rel="stylesheet" href="./styles/global.css" />
+  <script defer src="./scripts/jquery.min.js"></script>
+  <script defer src="./scripts/parsley.min.js"></script>
+  <script defer src="./scripts/parsley.ru.js"></script>
+  <title>Национальная система оповещения - регистрация</title>
+  <div class="login">
+    <form name="loginForm" method="POST" data-parsley-validate>
+      <p class="label">Имя</p>
+      <p class="field">
+        <input required name="lastName" placeholder="Иванов" />
+      </p>
+      <p class="label">Имя</p>
+      <p class="field">
+        <input required name="firstName" placeholder="Иван" />
+      </p>
+      <p class="label">Имя</p>
+      <p class="field">
+        <input required name="passport" placeholder="1234 567890" />
+      </p>
+      <p class="label">Имя</p>
+      <p class="field">
+        <input
+          type="date"
+          value="1998-07-22"
+          min="1900-01-01"
+          required
+          name="birthDate"
+        />
+      </p>
+      <p class="label">Имя</p>
+      <p class="field">
+        <input required name="city" placeholder="Москва" />
+      </p>
+      <p class="label">Имя</p>
+      <p class="field">
+        <input required name="street" placeholder="Ленина" />
+      </p>
+      <p class="label">Имя</p>
+      <p class="field">
+        <input
+          type="email"
+          required
+          name="login"
+          placeholder="example@mail.ru"
+        />
+      </p>
+      <p class="label">Имя</p>
+      <p class="field">
+        <input required name="phone" placeholder="+79001234567" />
+      </p>
+      <p class="label">Имя</p>
+      <p class="field">
+        <input type="password" required name="password" placeholder="пароль" />
+      </p>
+      <p class="label">Имя</p>
+      <p class="submit">
+        <button type="submit" name="submit" class="button register-button">
+          <p>Зарегистрироваться</p>
+        </button>
+      </p>
+    </form>
+  </div>
 </html>
