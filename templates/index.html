@@ -7,27 +7,34 @@
     <script defer src="./scripts/jquery.min.js"></script>
     <script defer src="./scripts/parsley.min.js"></script>
     <title>Национальная система оповещения</title>
-    <form class="login" name="loginForm" method="POST" data-parsley-validate>
-      <p class="field">
-        <input
-          type="email"
-          required
-          name="login"
-          placeholder="Электронная почта"
-        />
-      </p>
-      <p class="field">
-        <input type="password" required name="password" placeholder="Пароль" />
-      </p>
-      <button type="submit" name="submit" class="button login-button">
-        <p>Войти</p>
-      </button>
+    <div class="login">
+      <form name="loginForm" method="POST" data-parsley-validate>
+        <p class="field">
+          <input
+            type="email"
+            required
+            name="login"
+            placeholder="Электронная почта"
+          />
+        </p>
+        <p class="field">
+          <input
+            type="password"
+            required
+            name="password"
+            placeholder="Пароль"
+          />
+        </p>
+        <button type="submit" name="submit" class="button login-button">
+          <p>Войти</p>
+        </button>
+      </form>
       <button
         onclick="window.location.href=`{{ url_for('register') }}`"
         class="button register-button"
       >
         <p>Зарегистрироваться</p>
       </button>
-    </form>
+    </div>
   </head>
 </html>
