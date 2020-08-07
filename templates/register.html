@@ -7,22 +7,24 @@
   <script defer src="./scripts/parsley.min.js"></script>
   <script defer src="./scripts/parsley.ru.js"></script>
   <title>Национальная система оповещения - регистрация</title>
-  <div class="login">
+  <a href="/"><img src="./assets/logo.png" alt="Лого компании" /></a>
+  <div class="register">
     <form name="loginForm" method="POST" data-parsley-validate>
-      <p class="label">Имя</p>
       <p class="field">
+        <label for="lastName">Фамилия</label>
         <input required name="lastName" placeholder="Иванов" />
       </p>
-      <p class="label">Имя</p>
       <p class="field">
+        <label for="firstName">Имя</label>
         <input required name="firstName" placeholder="Иван" />
       </p>
-      <p class="label">Имя</p>
       <p class="field">
-        <input required name="passport" placeholder="1234 567890" />
+        <label for="passport">Паспорт</label>
+        <input required name="passportSeries" placeholder="1234" />
+        <input required name="passportNumber" placeholder="567890" />
       </p>
-      <p class="label">Имя</p>
       <p class="field">
+        <label for="birthDate">Дата рождения</label>
         <input
           type="date"
           value="1998-07-22"
@@ -31,32 +33,36 @@
           name="birthDate"
         />
       </p>
-      <p class="label">Имя</p>
       <p class="field">
+        <label for="city">Город</label>
         <input required name="city" placeholder="Москва" />
       </p>
-      <p class="label">Имя</p>
       <p class="field">
+        <label for="street">Улица</label>
         <input required name="street" placeholder="Ленина" />
       </p>
-      <p class="label">Имя</p>
       <p class="field">
+        <label for="email">Электронная почта</label>
         <input
           type="email"
           required
-          name="login"
+          name="email"
           placeholder="example@mail.ru"
         />
       </p>
-      <p class="label">Имя</p>
       <p class="field">
+        <label for="phone">Телефон</label>
         <input required name="phone" placeholder="+79001234567" />
       </p>
-      <p class="label">Имя</p>
       <p class="field">
-        <input type="password" required name="password" placeholder="пароль" />
+        <label for="password">Пароль</label>
+        <input
+          type="password"
+          required
+          name="password"
+          placeholder="8 символов"
+        />
       </p>
-      <p class="label">Имя</p>
       <p class="submit">
         <button type="submit" name="submit" class="button register-button">
           <p>Зарегистрироваться</p>

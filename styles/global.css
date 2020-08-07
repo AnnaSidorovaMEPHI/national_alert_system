@@ -20,23 +20,25 @@ img {
   height: auto;
 }
 
-.login {
-  padding: 2em;
-}
-
 input {
-  font-size: 1.2em;
+  font-size: 1.1em;
   border-radius: 6px;
   border-width: 0;
   color: black;
   background-color: #eeeeee;
   padding: 10px;
+  margin: 10px;
+  text-align: left;
 }
 
 input:focus {
   border-width: 2px;
   border-color: hsl(240, 50%, 50%);
   background-color: #ffffff;
+}
+
+.label {
+  text-align: right;
 }
 
 .parsley-success {
@@ -51,6 +53,15 @@ input:focus {
   font-size: 0.8em;
   list-style-type: none;
   color: hsl(0, 50%, 50%);
+}
+
+.login {
+  padding: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 button {
@@ -68,6 +79,16 @@ button {
 }
 
 .register-button {
+  background-color: hsl(120, 50%, 50%);
+  float: right;
+}
+
+.login-button-top {
+  background-color: hsl(240, 50%, 50%);
+  float: right;
+}
+
+.register-button-top {
   background-color: hsl(120, 50%, 50%);
   float: right;
 }
