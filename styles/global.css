@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Nova+Flat&family=Roboto+Slab&display=swap");
+body {
+  margin: 1em auto;
+  max-width: 40em;
+  padding: 0 0.62em;
+  font: 22px/1.62 "Roboto", helvetica, arial, sans-serif;
+  color: #252525;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.login {
+  padding: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+input {
+  font-size: 1.2em;
+  border-radius: 6px;
+  border-width: 0;
+  color: black;
+  background-color: #eeeeee;
+  padding: 10px;
+}
+
+input:focus {
+  border-width: 2px;
+  border-color: hsl(240, 50%, 50%);
+  background-color: #ffffff;
+}
+
+.parsley-success {
+  border: 2px solid hsl(120, 50%, 50%);
+}
+
+.parsley-error {
+  border: 2px solid hsl(0, 50%, 50%);
+}
+
+.parsley-required {
+  font-size: 0.8em;
+  list-style-type: none;
+  color: hsl(0, 50%, 50%);
+}
+
+button {
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0px 30px;
+  margin: 0 8px;
+}
+
+.login-button {
+  background-color: hsl(240, 50%, 50%);
+  float: left;
+}
+
+.register-button {
+  background-color: hsl(120, 50%, 50%);
+  float: right;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: hsl(0, 0%, 80%);
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+  }
+}

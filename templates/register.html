@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="data:image/png;base64," />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <script defer src="./scripts/jquery.min.js"></script>
+    <script defer src="./scripts/parsley.min.js"></script>
+    <title>Национальная система оповещения - регистрация</title>
+    <div class="login">
+      <form name="loginForm" method="POST" data-parsley-validate>
+        <p class="field">
+          <input required name="firstName" placeholder="Имя" />
+        </p>
+        <p class="field">
+          <input required name="lastName" placeholder="Фамилия" />
+        </p>
+        <p class="field">
+          <input required name="passport" placeholder="Паспорт" />
+        </p>
+        <p class="field">
+          <input required name="city" placeholder="Город" />
+        </p>
+        <p class="field">
+          <input required name="street" placeholder="Улица" />
+        </p>
+        <p class="field">
+          <input
+            type="email"
+            required
+            name="login"
+            placeholder="Электронная почта"
+          />
+        </p>
+        <p class="field">
+          <input required name="phone" placeholder="Номер телефона" />
+        </p>
+        <p class="field">
+          <input
+            type="password"
+            required
+            name="password"
+            placeholder="Пароль"
+          />
+        </p>
+        <p class="submit">
+          <button type="submit" name="submit" class="button register-button">
+            <p>Зарегистрироваться</p>
+          </button>
+        </p>
+      </form>
+    </div>
+  </head>
+</html>
