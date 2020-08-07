@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>National Alert System</title>
+    <style type="text/css">
+  body {
+    font-family: Georgia, "Times New Roman",
+          Times, serif;
+    color: purple;
+    size: 55;
+    background-color: #357EC7 }
+  h1 {
+    font-family: Helvetica, Geneva, Arial,
+          SunSans-Regular, sans-serif }
+	  </style>
+	<form class="form-1">
+	    <p class="field">
+	        <input type="text" name="login" placeholder="Логин или емэйл" size=30px>
+	        <i class="icon-user icon-large"></i>
+	    </p>
+	        <p class="field">
+	        <input type="password" name="password" placeholder="Пароль" size=30px>
+	        <i class="icon-lock icon-large"></i>
+	    </p>      
+	    <p class="submit">
+	        <button type="submit" name="submit"><i class="icon-arrow-right icon-large"></i></button>
+	    </p>
+	</form>
+	<a href="{{ url_for('profile', login=login, password=password) }}">profile</a>
+
+</head>
