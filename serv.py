@@ -1,13 +1,9 @@
 #!/usr/bin/env python
-import smtplib
 from flask import Flask, request, render_template, redirect, url_for, session
-from flask_mail import Mail, Message as EmailMessage
 import os
+from mail import EmailSender
 
-mail = Mail()
 app = Flask(__name__)
-mail.init_app(app)
-
 
 
 @app.route('/profile')
@@ -19,12 +15,9 @@ def profile():
 
 @app.route('/')
 def index():
-	smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
-	smtpObj.starttls()
-	smtpObj.login('archellik@gmail.com','smtp3228')
-	smtpObj.sendmail('archellik@gmail.com',"Anna.Sidorova.1998@yandex.ru","go to bed!")
-	smtpObj.quit()
-
+	# dfddd
+	mail = EmailSender(["archellik@gmail.com"])
+	mail.send_alert(r"Добрый день.Убедительная просьба явиться на вакцинацию!".encode('utf-8', errors='ignore'))
 	num = request.args.get('num')
 	if num:
 		return redirect(url_for('profile', num=int(num), chord='0'))
