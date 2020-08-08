@@ -1,16 +1,15 @@
 import hashlib
 import flask
 from flask import Flask, request, render_template, redirect, url_for, session, send_from_directory
-from flask_mysqldb import MySQL
+from flask_mysqldb import MySQL 
 from mail import EmailSender
 
 app = Flask(__name__)
-app.config['MYSQL_HOST'] = 'mysql'
+app.config['MYSQL_HOST'] = '192.168.88.46'
 app.config['MYSQL_USER'] = 'archelik'
 app.config['MYSQL_PASSWORD'] = 'bestpas5'
 app.config['MYSQL_DB'] = 'archella'
 mysql = MySQL(app)
-
 
 @app.route('/')
 def index():
