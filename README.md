@@ -11,3 +11,5 @@
   
 
 **requirements.txt** - зависимости. 
+
+https://alert.finkrer.wtf
