@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 app.config['MYSQL_HOST'] = '192.168.88.167'
-app.config['MYSQL_USER'] = 'archelic'
+app.config['MYSQL_USER'] = 'archelik'
 app.config['MYSQL_PASSWORD'] = 'bestpas5'
 app.config['MYSQL_DB'] = 'archella'
 
@@ -27,10 +27,10 @@ def registration():
         data_born = data['data_born']
         md5 = hashlib.md5(data['password']).hexdigest
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO People(id,firstName, lastName, passport, sity, email, mobile, data_born) VALUES (%d,%s,%s,%s,%s,%s,%s,%s,%s)",
+        cur.execute("INSERT INTO People(id,firstName, lastName, passport, sity, email, mobile, data_born) VALUES (%i,%s,%s,%s,%s,%s,%s,%s)",
                     (id, firstName, lastName, passport, sity, email, mobile, data_born))
         cur.execute(
-            "INSERT INTO Creds(id, email, password) VALUES (%d,%s,%s)", (id, email, md5))
+            "INSERT INTO Creds(id, email, password) VALUES (%i,%s,%s)", (id, email, md5))
         mysql.connection.commit()
         cur.close()
         return 'success'

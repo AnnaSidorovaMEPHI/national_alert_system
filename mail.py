@@ -24,7 +24,7 @@ class EmailSender(object):
 
 	@staticmethod	
 	def _load_json(path):
-		abs_path = "C:\\Users\\User\\Desktop\\national_alert_system\\src\\config.json"
+		abs_path = path
 		with open(abs_path, "rb") as json_file:
 			data = json.loads(json_file.read())
 		return data
